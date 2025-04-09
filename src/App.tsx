@@ -6,20 +6,22 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ScanQR from './pages/ScanQR';
 import TransactionComplete from './pages/TransactionComplete';
+import TransactionError from './pages/TransactionError';
 
 function App() {
   return (
-    <WalletProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <WalletProvider>
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/scan" element={<ScanQR />} />
           <Route path="/transaction" element={<TransactionComplete />} />
+          <Route path="/transaction-error" element={<TransactionError />} />
         </Routes>
-      </BrowserRouter>
-    </WalletProvider>
+      </WalletProvider>
+    </BrowserRouter>
   );
 }
 

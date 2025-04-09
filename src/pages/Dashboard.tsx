@@ -76,12 +76,19 @@ export default function Dashboard() {
               onClick={handleAddPoints}
               disabled={!amount || parseFloat(amount) <= 0}
               className={`w-full py-4 rounded-xl text-lg font-semibold transition-all duration-200 ${
-                amount && parseFloat(amount) > 0
-                  ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:shadow-lg transform hover:scale-[1.02]'
-                  : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+              amount && parseFloat(amount) > 0
+              ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:shadow-lg transform hover:scale-[1.02]'
+              : 'bg-gray-200 text-gray-500 cursor-not-allowed'
               }`}
             >
+              <a
+              href="https://buy.stripe.com/test_5kA022gSi6eQ0WAfYZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full"
+              >
               Add Points
+              </a>
             </button>
           </div>
         </div>
